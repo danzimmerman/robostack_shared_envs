@@ -36,6 +36,7 @@ colcon-common-extensions = "*"
 [target.linux.dependencies]
 libgl-devel = "*"
 
+
 # Define all the different ROS environments
 # Each environment corresponds to a different ROS distribution
 # and can be activated using the `pixi run/shell -e <environment>` command.
@@ -67,9 +68,13 @@ channels = ["https://prefix.dev/robostack-jazzy"]
 [feature.jazzy.dependencies]
 ros-jazzy-desktop = "*"
 
-### ROS Kilted ####
+### ROS Lyrical ####
 [feature.lyrical]
 channels = ["https://prefix.dev/robostack-lyrical"]
 
 [feature.lyrical.dependencies]
 ros-lyrical-desktop = "*"
+
+# Install Gazebo for ROS Lyrical on desktop Linux
+[feature.lyrical.target.linux-64.dependencies]
+ros-lyrical-ros-gz = "*"
